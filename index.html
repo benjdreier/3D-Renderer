@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 3px;
+}
+</style>
+</head>
+<body>
+<canvas id="render" height=600 width=960></canvas><br><br>
+
+Mouse Mode: <label for="cameraMode">Fly</label><input type="radio" name="mouseMode" id="cameraMode" checked>   <label for="selectMode">Rotate</label><input type="radio" name = "mouseMode"id="selectMode">
+<br>
+
+FOV: <input type="range" min=50 max=180 value=75 id="fovslider"><br>
+Point Size: <input type="range" min=0 max=100 value=0 id="sizeslider"><br>
+Function: <input type="textbox" value="sqrt(1-x^2-y^2)" id="functionbox"> <input type="button" value="Plot" id="plotbutton" onclick="updatePlot();">
+
+</body>
+<script type="text/javascript" src="https://unpkg.com/mathjs@5.0.3/dist/math.min.js"></script>
+<script type="text/javascript" src="camera.js"></script>
+<script type="text/javascript" src="render.js"></script>
+</html>
